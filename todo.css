@@ -1,0 +1,288 @@
+/* UNIVERSAL SELECTOR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* BODY */
+body {
+  background-color: #ccc;
+}
+::selection {
+  color: #fff;
+  background: #4b08f766;
+}
+/* WHOLE DIV WORKING INSIDE */
+.wrapper {
+  max-width: 700px;
+  flex-wrap: wrap;
+  background: #fff;
+  margin: 15px auto;
+  border-radius: 7px;
+  padding: 24px 0 3px;
+  box-shadow: 10px 2px 30px rgba(0, 0, 0, 0.2);
+}
+/* IMAGE OF AN ICON IN INPUT PLACEHOLDER */
+img {
+  position: absolute;
+  top: 7px;
+  left: 20px;
+  display: flex;
+  align-items: start;
+  max-height: 35px;
+  max-width: 25px;
+}
+/* INPUT DIV/BOX CSS */
+.task-input {
+  position: relative;
+  height: 45px;
+  margin-top: -10px;
+  padding: 0 9px;
+}
+
+.task-input input {
+  height: 100%;
+  width: 83%;
+  outline: none;
+  font-size: 18px;
+  border-radius: 8px;
+  padding: 0 10px 0 45px;
+  letter-spacing: 1px;
+  background-color: #eeecec;
+  border: none;
+}
+/* WHEN CURSOR IS ACTIVE */
+.task-input input:focus,
+.task-input input.active {
+  padding-left: 44px;
+  border: 1px solid #baaeae;
+}
+/*INPUT PLACEHOLDER  */
+.task-input input::placeholder {
+  color: #9e9e9e;
+  opacity: 0.6;
+}
+/* ADD TASK BUTTONS DESIGN */
+.add-btn {
+  padding: 0.5rem;
+  float: right;
+  margin-top: 7px;
+  margin-left: 6px;
+  background-color: #ccc;
+  font-weight: 700;
+  font-size: 13px;
+  color: #474545;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+}
+/* WHEN ADD TASK BUTTON CLICK */
+.add-btn:active {
+  transform: scale(0.93);
+  box-shadow: 3px 1px 7px rgb(101, 101, 101);
+  color: #000;
+  font-weight: 700;
+  pointer-events: auto;
+}
+
+/* COMPLETE AND CLEAR COMPLETED */
+.controls,
+.bottom-controls,
+li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.controls {
+  padding: 7px 0px;
+
+  border-bottom: 1px solid #ccc;
+}
+.clear-btn {
+  border: none;
+  opacity: 0.6;
+  outline: none;
+  color: #625c5c;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 540;
+  background-color: white;
+}
+.clear-btn:active {
+  transform: scale(0.93);
+  color: #000;
+  font-weight: 540;
+}
+
+/* TASK LEFT - ALL- UNCOMPLETE COMPLETE CSS */
+.bottom-controls {
+  position: relative;
+  background-image: sticky;
+  bottom: -6px;
+  padding: 10px 1px;
+  border-top: 1px solid #ccc;
+}
+/* NUMBER OF TASK LEFT  */
+.task-left {
+  font-size: 13px;
+  color: #b4afaf;
+  cursor: pointer;
+}
+.bold {
+  font-weight: 700;
+  color: rgb(74, 72, 72);
+}
+/* lIST SORT(ALL COMPLETE UNCOMPLETE) */
+.filters span {
+  margin: 1px 0px 0px 3px;
+  font-size: 13px;
+  color: #b4afaf;
+  cursor: pointer;
+}
+
+.filters span:first-child {
+  margin-left: 0;
+}
+/* ACTIVE TIME  */
+.filters span.active {
+  color: #131313;
+}
+.filters > span:active {
+  transform: scale(0.93);
+  color: #000;
+  font-weight: 540;
+  pointer-events: auto;
+}
+/* UNORDERD LISTING CSS */
+.task-box {
+  display: block;
+  flex-wrap: wrap;
+  margin-top: -4px;
+  margin-right: 5px;
+  padding: 15px 0px 0px 10px;
+}
+
+.task-box.overflow {
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.task-box::-webkit-scrollbar {
+  width: 5px;
+}
+
+.task-box .task {
+  list-style: none;
+  font-size: 20px;
+
+  margin-bottom: 6px;
+  padding-bottom: 10px;
+  align-items: flex-start;
+}
+.task-box .task:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0px;
+}
+/* CHECKBOX */
+.task-box .task label {
+  display: flex;
+  align-items: flex-start;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+/* Hide the default checkbox */
+.task input[type="checkbox"] {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  opacity: 0;
+}
+
+/* Create the custom checkbox */
+.task .checkmark {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #333232;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Style the custom checkbox when checked */
+.task input[type="checkbox"]:checked + .checkmark:after {
+  content: "";
+  position: absolute;
+  left: 2.5px;
+  top: 2.5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #3e3d3d;
+}
+
+/* Style the label text */
+.task label p {
+  user-select: none;
+  margin-left: 40px;
+  word-wrap: break-word;
+  letter-spacing: 1.7px;
+}
+.task label p.checked {
+  text-decoration: line-through;
+}
+/* Style the label when the checkbox is checked */
+.task input[type="checkbox"]:checked + .checkmark {
+  border: 2px solid #000;
+}
+
+/* ANIMATION OF DELETE BUTTON WHEN TASK CREATED LIST*/
+.task-menu img {
+  position: relative;
+  height: 26px;
+  cursor: pointer;
+  left: -10%;
+  top: -1px;
+  transform: translateX(-60%); /* Center the button horizontally */
+  opacity: 0; /* Hide the button by default */
+  transition: opacity 0.1s ease-in-out;
+}
+/* WHEN HOVER COME CSS SHOWS */
+.task-menu img:hover {
+  opacity: 1;
+}
+/* MEDIA QUERY CSS  */
+@media (max-width: 400px) {
+  body {
+    padding: 0 10px;
+  }
+  .wrapper {
+    padding: 20px 0;
+  }
+  .filters span {
+    margin: 0 5px;
+  }
+  .task-input {
+    padding: 0 20px;
+  }
+  .controls {
+    padding: 18px 20px;
+  }
+  .task-box {
+    margin-top: 20px;
+    margin-right: 5px;
+    padding: 0 15px 10px 20px;
+  }
+  .task label input {
+    margin-top: 4px;
+  }
+}

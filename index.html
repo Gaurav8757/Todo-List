@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS LINK -->
+    <link rel="stylesheet" type="text/css" media="screen" href="todo.css" />
+    <title>Todo List App</title>
+  </head>
+
+  <body>
+    <!-- PARENT DIV -->
+    <div class="wrapper">
+      <!-- INPUT DIV -->
+      <div class="task-input">
+        <input type="text" placeholder="Type your todo list" />
+        <img
+          src="data:image/png;base64,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"
+        />
+        <button class="add-btn">Add Task</button>
+      </div>
+      <!-- DIV OF  Complete all tasks || Clear completed-->
+      <div class="controls">
+        <span class="clear-btn"> Complete all tasks</span>
+
+        <span class="clear-btn">Clear completed</span>
+      </div>
+      <!-- UNORDERED LIST CODE WHICH USED IN JS -->
+      <ul class="task-box"></ul>
+
+      <!-- BOTTOM DIV  -->
+      <div class="bottom-controls">
+        <span class="task-left"> tasks left</span>
+        <!--  (ALL COMPLETE UNCOMPLETE)-->
+        <div class="filters">
+          <span class="active" id="all">All</span>
+          <span id="pending">Uncomplete</span>
+          <span id="completed">Completed</span>
+        </div>
+      </div>
+    </div>
+    <!-- JAVASCRIPT LINK -->
+    <script src="toDo.js"></script>
+  </body>
+</html>
